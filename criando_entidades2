@@ -1,0 +1,17 @@
+Especificações de um carro (n pra n)
+
+ ok Shared / infra / migrations /  
+============================================================================================================
+ ok modules / car / dtos / ICreateCarDTO.ts ( declarar as especifications que não existia antes )
+ ok modules / car / infra / typeorm / entities / Cars.ts ( Criar a representação da tabela de especificação como um array )
+ ok modules / car / repositories / IcarsRepository.ts ( Declação de métodos )
+ ok modules / car / repositories / ISpecificationsRepository.ts ( Declação de métodos )
+ ok modules / car / infra / typeorm / repositories / CarsRepository.ts ( Implementação dos métodos )
+ ok modules / car / UseCases / createCar / CreateCarUseCase.ts ( Uso dos métodos )
+ ok modules / car / UseCases / createCar / CreateCarController.ts ( Controla requisições das rotas x respostas do usecase )
+============================================================================================================
+ xxShared / Container / index.ts ( injeção de dependências )
+ ok Shared / Infra / Http / Routes / car.routes.ts ( especificação das rotas )
+
+
+

@@ -1,0 +1,27 @@
+Criar um Carro
+
+ Shared / infra / migrations /  98989898-CreateCars.ts
+============================================================================================================
+ modules / car / dtos / ICreateCarDTO.ts ( Especificar Objeto Carro )
+ modules / car / infra / typeorm / entities / Cars.ts ( Criar a representação da tabela no conceito do typeorm )
+ modules / car / repositories / IcarsRepository.ts ( Declação de métodos )
+ modules / car / infra / typeorm / repositories / CarsRepository.ts ( Implementação dos métodos )
+ modules / car / UseCases / createCar / CreateCarUseCase.ts ( Uso dos métodos )
+ modules / car / UseCases / createCar / CreateCarController.ts ( Controla requisições das rotas x respostas do usecase )
+============================================================================================================
+ Shared / Container / index.ts ( injeção de dependências )
+ Shared / Infra / Http / Routes / car.routes.ts ( especificação das rotas )
+
+Criar a listagem de carros
+
+ modules / car / repositories / IcarsRepository.ts ( Declação de métodos )
+ modules / car / infra / typeorm / repositories / CarRepository.ts ( Implementação dos métodos )
+ modules / car / UseCases / createCar / ListCarUseCase.ts ( Uso dos métodos )
+ modules / car / UseCases / createCar / CreateCarController.ts ( Controla requisições das rotas x respostas do usecase )
+
+Validações
+
+Usuário está logado
+Usuário é Admin
+
+
