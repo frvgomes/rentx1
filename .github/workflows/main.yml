@@ -35,10 +35,20 @@ jobs:
         source: ".,!node_modules"
         target: "~/app/sua_aplicacao"
     
+    # - Run production scripts tu run yarn, migrations and restart service    
+    - name: Install dependencies on AWS
+      uses: appleboy/ssh-action@v0.1.6
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        port: ${{ secrets.SSH_PORT }}
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          cd ~/app/sua_aplicao
+          yarn
+          ./node_modules/.bin/typeorm migration:run
+          pm2 restart sua_aplicao
     
     
-    # - Substituir o código existente na pasta dist pelo novo conteúdo (temp/dist)
-    # - Instalar as dependências na AWS
-    # - Executar migrations
-    # - Restart no servidor node
+    
   
